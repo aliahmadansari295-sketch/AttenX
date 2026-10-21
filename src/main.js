@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import { Html5Qrcode, Html5QrcodeScanner } from "html5-qrcode";
 
-const SUPABASE_URL = "https://viygxrgpmqrlgonituyx.supabase.co" ;
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpeWd4cmdwbXFybGdvbml0dXl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIxNTY5MTgsImV4cCI6MjEwNzczMjkxOH0.C5Q091j7DjdqQXHsZgm1gAxy6FE5Zq1YkFM_DXjesPQ";
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL ;
+const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY ;
 const supabase = createClient(SUPABASE_URL,SUPABASE_KEY);
 
 let onScreenScan = true;
